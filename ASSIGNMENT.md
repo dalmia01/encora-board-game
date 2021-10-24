@@ -16,6 +16,10 @@ simple small app - basic functional components & business logic in app.tsx & uti
 
 ## Part 3
 
+1. user interface - Title, Input, Button , Board, Box - components
+2. playing surface - click Box
+3. win-state - App state - playerValues, winner.
+
 ## Part 4
 
 1. No the game is not fair.
