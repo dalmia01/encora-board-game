@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live preview available
+
+[Encora Baord Game](https://encora-board-game.netlify.app/).
+
 ## Available Scripts
 
 In the project directory, you can run:
