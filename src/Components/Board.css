@@ -1,0 +1,27 @@
+.board {
+    margin: 20px auto;
+}
+
+.row {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.column {
+    border: 1px solid #000;
+    display: inline-block;
+    min-height: 80px;
+    width: 80px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.column1 {
+    background-color: red;
+}
+.column2 {
+    background-color: green;
+}

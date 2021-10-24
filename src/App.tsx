@@ -42,8 +42,11 @@ function App() {
     const resetHandler = () => {
         setBoardNumber(3);
         setFinalBoard(3);
-        setPlayerValues({ player1: 0, player2: 0 });
+        setPlayer(1);
+        setBoardValues([[0,0,0],[0,0,0],[0,0,0]]);
+        setPlayerValues({player1 : 0 ,player2 : 0});
         setWinner(null);
+        setCount(0);
     };
 
     const fillColorHandler = (row: number, column: number) => {
