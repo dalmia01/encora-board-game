@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { Board } from "./Components/Board";
 import { Button } from "./Components/Button";
 import { Input } from "./Components/Input";
 import { Title } from "./Components/Title";
@@ -12,6 +13,9 @@ function App() {
         player2: 0,
     });
     const [winner, setWinner] = useState(null);
+    const [boardValues,setBoardValues] = useState([[0,0,0],[0,0,0],[0,0,0]]);
+    const [count,setCount] = useState(0);
+    const [player,setPlayer] = useState(1);
 
     const changeBoardNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (isNaN(Number(e.target.value))) return;
@@ -30,6 +34,15 @@ function App() {
         setWinner(null);
     };
 
+    const fillColorHandler = (row:number,column:number) => {
+      if(boardValues[row][column] === 1 || boardValues[row][column] === 2) return ;
+      let newBoardValues = [...boardValues];
+      newBoardValues[row][column] = player;
+      setBoardValues(newBoardValues);
+      let newCount = count + 1;
+      setCount(newCount);
+  }
+
     return (
         <main className="App">
             <Title title={"Encora Board Game"} />
@@ -43,6 +56,7 @@ function App() {
                 clickHandler={changeBoardHandler}
                 disabled={boardNumber < 2 || boardNumber > 8}
             />
+            <Board gridSystem={finalBoard} clickHandler={fillColorHandler} boardValues={boardValues} />
             <div className="player-values">
                 <div>Player 1 : {playerValues.player1} </div>
                 <div>Player 2 : {playerValues.player2} </div>
