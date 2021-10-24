@@ -1,4 +1,5 @@
 import './Board.css';
+import { Box } from './Box';
 
 type BoardProps = {
     gridSystem: number;
@@ -6,6 +7,7 @@ type BoardProps = {
     boardValues: number[][];
 };
 
+/** gets complete board width */
 const boardStyle = (gridSystem: number) => ({
     width: gridSystem * 80,
 });
@@ -14,20 +16,12 @@ export const Board = (props: BoardProps) => {
     const { gridSystem, clickHandler, boardValues } = props;
     return (
         <div className="board" style={boardStyle(gridSystem)}>
-            {[...boardValues].map((item, index) => {
+            {[...boardValues].map((item, rowIndex) => {
                 return (
-                    <div className="row" key={`row${index}`}>
-                        {[...item].map((innerItem, innerIndex) => {
+                    <div className="row" key={`row${rowIndex}`}>
+                        {[...item].map((playerValue, columnIndex) => {
                             return (
-                                <div
-                                    onClick={() =>
-                                        clickHandler(index, innerIndex)
-                                    }
-                                    className={`column column${innerItem}`}
-                                    key={`colum${innerIndex}`}
-                                >
-                                    {innerItem}
-                                </div>
+                                <Box clickHandler={()=>clickHandler(rowIndex,columnIndex)} columnIndex={columnIndex} playerValue={playerValue} />
                             );
                         })}
                     </div>
