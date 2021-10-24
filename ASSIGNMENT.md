@@ -15,3 +15,10 @@ simple small app - basic functional components & business logic in app.tsx & uti
 ![Board Game Architecture](src/images/encora-board-game-architecture.png)
 
 ## Part 3
+
+## Part 4
+
+1. No the game is not fair.
+2. player goes first gets a bit advantage.
+3. for odd board sizes(3,5,7) the game is unfair.
+4. yes odd board, the player who goes first gets 1 more chance than the other. like 9 boxes , first paler gets 5 chances & second player gets 4 chances. so clearly player1 has greater chance of winning.
