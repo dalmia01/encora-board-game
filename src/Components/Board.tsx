@@ -1,3 +1,5 @@
+import './Board.css';
+
 type BoardProps = {
     gridSystem: number;
     clickHandler: (row: number, column: number) => void;
