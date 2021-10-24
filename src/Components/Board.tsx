@@ -9,7 +9,7 @@ type BoardProps = {
 
 /** gets complete board width */
 const boardStyle = (gridSystem: number) => ({
-    width: gridSystem * 80,
+    width: gridSystem * 50,
 });
 
 export const Board = (props: BoardProps) => {

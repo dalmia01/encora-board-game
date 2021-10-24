@@ -10,8 +10,8 @@
 .column {
     border: 1px solid #000;
     display: inline-block;
-    min-height: 80px;
-    width: 80px;
+    min-height: 50px;
+    width: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
